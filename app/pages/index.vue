@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-
+const { data: quote } = useLazyAsyncData('quote', () => Promise.resolve(randQuote()))
 </script>
 
 <template>
@@ -89,15 +89,15 @@
       </div>
     </div>
     <div class="h-80 w-0.5 bg-slate-600 shadow-[-2px_0px_8px_2px] shadow-slate-600/50 rounded origin-center -rotate-30" />
-    <div class="text-3xl">
-      <p>给岁月以文明</p>
-      <div class="h-8" />
-      <p class="ml-8">
-        我们都是阴沟里的虫子
-      </p>
-      <div class="h-8" />
-      <p class="ml-16">
-        但总还是得有人仰望星空
+    <div class="text-3xl flex flex-col gap-8">
+      <p
+        v-for="(line, index) in quote"
+        :key="line"
+        :style="{
+          marginLeft: `${index * 2 + 2}rem`,
+        }"
+      >
+        {{ line }}
       </p>
     </div>
   </div>
