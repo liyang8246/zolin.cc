@@ -9,8 +9,8 @@ page.value?.forEach((p) => {
 </script>
 
 <template>
-  <div class="bg-stone-950 text-gray-300 relative -z-20">
-    <div class="absolute h-screen w-full bg-linear-to-b from-slate-900 from-10% to-stone-950 -z-10" />
-    <NuxtPage/>
+  <div class="bg-linear-to-b from-slate-900 from-[128px] to-stone-950 to-[768px] text-gray-300 p-4">
+        <Header />
+        <NuxtPage/>
   </div>
 </template>
