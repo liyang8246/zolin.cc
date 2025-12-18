@@ -89,12 +89,12 @@ const { data: quote } = useLazyAsyncData('quote', () => Promise.resolve(randQuot
       </div>
     </div>
     <div class="h-80 w-0.5 bg-slate-600 shadow-[-2px_0px_8px_2px] shadow-slate-600/50 rounded origin-center -rotate-30" />
-    <div class="text-3xl flex flex-col gap-8">
+    <div class="text-3xl flex flex-col gap-8 mb-8">
       <p
         v-for="(line, index) in quote"
         :key="line"
         :style="{
-          marginLeft: `${index * 2 + 2}rem`,
+          marginLeft: `${index * 3 + 2}rem`,
         }"
       >
         {{ line }}
