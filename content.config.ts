@@ -8,8 +8,8 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         tags: z.array(z.string()).optional(),
-        hash: z.string()
-      })
+        hash: z.string(),
+      }),
     }),
     jots: defineCollection({
       type: 'page',

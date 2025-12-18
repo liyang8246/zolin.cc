@@ -1,7 +1,11 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '@nuxtjs/color-mode'],
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/color-mode',
+    '@nuxt/eslint'
+  ],
   devtools: { enabled: true },
   css: ['~/assets/main.css'],
   vite: {
@@ -19,5 +23,10 @@ export default defineNuxtConfig({
   },
   colorMode: {
     preference: 'dark',
-  }
+  },
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
 })
