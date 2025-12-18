@@ -1,7 +1,7 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', '@nuxtjs/color-mode'],
   devtools: { enabled: true },
   css: ['~/assets/main.css'],
   vite: {
@@ -16,5 +16,8 @@ export default defineNuxtConfig({
         './transformers/title-hash.ts'
       ]
     }
+  },
+  colorMode: {
+    preference: 'dark',
   }
 })
