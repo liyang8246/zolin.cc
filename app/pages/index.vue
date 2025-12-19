@@ -3,8 +3,8 @@ const { data: quote } = useLazyAsyncData('quote', () => Promise.resolve(randQuot
 </script>
 
 <template>
-  <div class="flex items-center justify-center pt-32">
-    <div class="flex flex-col gap-4 w-fit">
+  <div class="flex items-center justify-center pt-8 md:pt-32">
+    <div class="flex flex-col gap-4 w-fit scale-75 md:scale-100">
       <div class="flex gap-4">
         <NuxtImg
           src="/profile.jpg"
@@ -72,7 +72,7 @@ const { data: quote } = useLazyAsyncData('quote', () => Promise.resolve(randQuot
         </p>
         <IconBadge
           icon="material-icon-theme:vscode"
-          label="VS Code"
+          label="VSCode"
         />
         <IconBadge
           icon="logos:obsidian-icon"
@@ -88,8 +88,8 @@ const { data: quote } = useLazyAsyncData('quote', () => Promise.resolve(randQuot
         />
       </div>
     </div>
-    <div class="h-80 w-0.5 bg-slate-500 shadow-[-2px_0px_8px_2px] shadow-slate-500/50 rounded origin-center -rotate-30" />
-    <div class="text-3xl flex flex-col gap-8 mb-8">
+    <div class="hidden lg:block h-80 w-0.5 bg-slate-500 shadow-[-2px_0px_8px_2px] shadow-slate-500/50 rounded origin-center -rotate-30" />
+    <div class="hidden lg:flex text-3xl flex-col gap-8 mb-8">
       <p
         v-for="(line, index) in quote"
         :key="line"

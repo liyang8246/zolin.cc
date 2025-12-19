@@ -34,7 +34,12 @@
     ]
   },
   "devDependencies": {
+    "@iconify-json/logos": "^1.2.10",
+    "@iconify-json/material-icon-theme": "^1.2.44",
+    "@iconify-json/tabler": "^1.2.24",
+    "@nuxtjs/mdc": "^0.19.1",
     "@types/fnv-plus": "^1.3.2",
+    "typescript": "^5.9.3",
     "vue": "^3.5.26"
   }
 }
