@@ -14,20 +14,22 @@ console.log(data.value?.posts)
 </script>
 
 <template>
-  <div class="flex flex-col items-center gap-4 max-w-2xl mx-auto">
-    <div class="flex gap-2 w-full">
+  <div class="flex flex-col items-center gap-4 max-w-2xl mx-auto pt-8 md:pt-32">
+    <!-- <div class="flex gap-2 w-full">
       <Badge
         v-for="t in data.tags.keys()"
         :key="t"
         :label="t"
       />
-    </div>
+    </div> -->
     <div
       v-for="p in data.posts"
       :key="p.hash"
-      class="flex flex-col gap-2 w-full border border-gray-600 rounded-xl bg-primary p-4"
+      class="flex flex-col gap-0 w-full"
     >
-      <h1>{{ p.title }}</h1>
+      <h1 class="text-xl">
+        {{ p.title }}
+      </h1>
       <div class="flex gap-2 text-sm text-secondary-content">
         <span>{{ p.date.slice(0, 10) }}</span>
         <span> | </span>
