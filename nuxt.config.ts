@@ -32,4 +32,11 @@ export default defineNuxtConfig({
       stylistic: true,
     },
   },
+  icon: {
+    provider: 'iconify',
+    serverBundle: false,
+    clientBundle: {
+      scan: true,
+    },
+  },
 })
