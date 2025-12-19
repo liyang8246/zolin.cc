@@ -9,7 +9,7 @@ const { icon, label, to } = defineProps<{
 <template>
   <NuxtLink
     :to="to"
-    class="flex items-center gap-1 bg-gray-800 rounded-xl outline outline-gray-500 hover:bg-gray-700 transition-all cursor-pointer py-1 px-2 w-fit"
+    class="flex items-center gap-1 bg-gray-800 rounded-md border border-gray-600 hover:bg-gray-700 transition-all cursor-pointer py-1 px-2 w-fit"
   >
     <Icon
       v-if="icon"

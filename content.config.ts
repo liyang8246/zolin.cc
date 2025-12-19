@@ -7,6 +7,7 @@ export default defineContentConfig({
       source: 'posts/**/*.md',
       schema: z.object({
         title: z.string(),
+        date: z.coerce.date(),
         tags: z.array(z.string()).optional(),
         hash: z.string(),
       }),
@@ -14,6 +15,12 @@ export default defineContentConfig({
     jots: defineCollection({
       type: 'page',
       source: 'jots/**/*.md',
+      schema: z.object({
+        title: z.string(),
+        date: z.coerce.date(),
+        tags: z.array(z.string()).optional(),
+        hash: z.string(),
+      }),
     }),
   },
 })
