@@ -19,12 +19,12 @@ const { data: quote } = await useAsyncData('quote', () => Promise.resolve(randQu
             <span> 2004 / 07 / 09 </span>
           </div>
           <div class="flex items-center gap-1">
-            <Icon name="i-tabler-tools" />
-            <span> Full Stack / Electronics </span>
-          </div>
-          <div class="flex items-center gap-1">
             <Icon name="i-tabler-map-pin" />
             <span> China / GuangDong </span>
+          </div>
+          <div class="flex items-center gap-1">
+            <Icon name="i-tabler-tools" />
+            <span> Full Stack / Electronics </span>
           </div>
         </div>
       </div>
@@ -32,15 +32,15 @@ const { data: quote } = await useAsyncData('quote', () => Promise.resolve(randQu
         <p class="font-bold w-24">
           Languages
         </p>
-        <IconBadge
+        <Badge
           icon="material-icon-theme:rust"
           label="Rust"
         />
-        <IconBadge
+        <Badge
           icon="material-icon-theme:python"
           label="Python"
         />
-        <IconBadge
+        <Badge
           icon="material-icon-theme:typescript"
           label="TypeScript"
         />
@@ -49,19 +49,19 @@ const { data: quote } = await useAsyncData('quote', () => Promise.resolve(randQu
         <p class="font-bold w-24">
           Tech Stack
         </p>
-        <IconBadge
+        <Badge
           icon="material-icon-theme:tauri"
           label="Tauri"
         />
-        <IconBadge
+        <Badge
           icon="material-icon-theme:vue"
           label="Vue"
         />
-        <IconBadge
+        <Badge
           icon="material-icon-theme:nuxt"
           label="Nuxt"
         />
-        <IconBadge
+        <Badge
           icon="material-icon-theme:svelte"
           label="Svelte"
         />
@@ -70,19 +70,19 @@ const { data: quote } = await useAsyncData('quote', () => Promise.resolve(randQu
         <p class="font-bold w-24">
           Dev Tools
         </p>
-        <IconBadge
+        <Badge
           icon="material-icon-theme:vscode"
           label="VSCode"
         />
-        <IconBadge
+        <Badge
           icon="logos:obsidian-icon"
           label="Obsidian"
         />
-        <IconBadge
+        <Badge
           icon="material-icon-theme:docker"
           label="Docker"
         />
-        <IconBadge
+        <Badge
           icon="material-icon-theme:git"
           label="Git"
         />
