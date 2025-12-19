@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { data: quote } = useLazyAsyncData('quote', () => Promise.resolve(randQuote()))
+const { data: quote } = await useAsyncData('quote', () => Promise.resolve(randQuote()))
 </script>
 
 <template>
