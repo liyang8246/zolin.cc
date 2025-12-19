@@ -9,15 +9,24 @@
     </div>
     <div class="mx-auto" />
     <div class="flex gap-4">
-      <div class="hover:text-white hover:cursor-pointer">
+      <NuxtLink
+        to="/posts"
+        class="hover:text-white hover:cursor-pointer"
+      >
         Posts
-      </div>
-      <div class="hover:text-white hover:cursor-pointer">
+      </NuxtLink>
+      <NuxtLink
+        to="/jots"
+        class="hover:text-white hover:cursor-pointer"
+      >
         Jots
-      </div>
-      <div class="hover:text-white hover:cursor-pointer">
+      </NuxtLink>
+      <NuxtLink
+        to="/friends"
+        class="hover:text-white hover:cursor-pointer"
+      >
         Friends
-      </div>
+      </NuxtLink>
     </div>
   </div>
 </template>
