@@ -6,3 +6,7 @@
   --color-secondary: oklch(27.8% 0.033 256.848);
   --color-secondary-content: oklch(70.4% 0.04 256.788);
 }
+
+* {
+  font-family: "Satoshi", sans-serif;
+}

@@ -22,8 +22,21 @@ console.log(data.value?.posts)
         :label="t"
       />
     </div>
-    <div class="w-full border border-gray-600 rounded-xl bg-stone-950">
-      123
+    <div
+      v-for="p in data.posts"
+      :key="p.hash"
+      class="flex flex-col gap-2 w-full border border-gray-600 rounded-xl bg-primary p-4"
+    >
+      <h1>{{ p.title }}</h1>
+      <div class="flex gap-2 text-sm text-secondary-content">
+        <span>{{ p.date.slice(0, 10) }}</span>
+        <span> | </span>
+        <span v-if="p.tags"> # </span>
+        <span
+          v-for="tag in p.tags"
+          :key="tag"
+        > {{ tag }} </span>
+      </div>
     </div>
   </div>
 </template>
