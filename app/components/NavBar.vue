@@ -4,9 +4,12 @@
 
 <template>
   <div class="flex h-12 items-center">
-    <div class="text-xl font-bold">
-      ZolinLee Blog
-    </div>
+    <NuxtLink
+      to="/"
+      class="text-xl font-bold"
+    >
+      ZolinLee
+    </NuxtLink>
     <div class="mx-auto" />
     <div class="flex gap-4">
       <NuxtLink
