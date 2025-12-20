@@ -19,12 +19,25 @@ const container = ref<HTMLElement>()
 let editorView: EditorView | null = null
 const highlighter = await useHighlighter(language)
 
+const transTheme = EditorView.theme({
+  '.cm-gutters': {
+    backgroundColor: 'transparent',
+  },
+  '.cm-activeLineGutter': {
+    backgroundColor: 'transparent',
+  },
+  '.cm-lineNumbers': {
+    minWidth: '28px',
+  },
+})
+
 onMounted(async () => {
   if (!container.value) return
 
   const state = EditorState.create({
     doc: model.value.trimEnd(),
     extensions: [
+      transTheme,
       lineNumbers(),
       shiki({
         highlighter: Promise.resolve(highlighter),
