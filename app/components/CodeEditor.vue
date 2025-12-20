@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { EditorState } from '@codemirror/state'
 import { lineNumbers, EditorView } from '@codemirror/view'
-import { createHighlighter } from 'shiki'
 import shiki from 'codemirror-shiki'
 
 const model = defineModel<string>({ default: '' })
@@ -18,24 +17,17 @@ const {
 
 const container = ref<HTMLElement>()
 let editorView: EditorView | null = null
+const highlighter = await useHighlighter(language)
 
-const highlighterPromise = createHighlighter({
-  langs: [],
-  themes: [theme],
-})
-
-const createEditor = async () => {
+onMounted(async () => {
   if (!container.value) return
-
-  const highlighter = await highlighterPromise
-  await highlighter.loadLanguage(language as any)
 
   const state = EditorState.create({
     doc: model.value.trimEnd(),
     extensions: [
       lineNumbers(),
       shiki({
-        highlighter: highlighterPromise,
+        highlighter: Promise.resolve(highlighter),
         language,
         theme,
       }),
@@ -47,12 +39,7 @@ const createEditor = async () => {
       }),
     ],
   })
-
   editorView = new EditorView({ state, parent: container.value })
-}
-
-onMounted(() => {
-  createEditor()
 })
 
 onBeforeUnmount(() => {

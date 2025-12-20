@@ -6,10 +6,12 @@ const { code, language } = defineProps<{
 </script>
 
 <template>
-  <CodeEditor
-    :model-value="code"
-    :language="language || 'text'"
-    :readonly="true"
-    theme="one-dark-pro"
-  />
+  <ClientOnly>
+    <CodeEditor
+      :model-value="code"
+      :language="language || 'text'"
+      :readonly="true"
+      theme="one-dark-pro"
+    />
+  </ClientOnly>
 </template>
