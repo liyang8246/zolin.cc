@@ -8,7 +8,7 @@ page.value?.forEach((p) => {
 </script>
 
 <template>
-  <div class="bg-linear-to-b from-slate-900 from-[128px] to-primary to-[768px] min-h-screen text-primary-content p-4">
+  <div class="bg-linear-to-b from-slate-900 from-[128px] to-primary to-[768px] min-h-screen text-primary-content p-4 font-default">
     <NavBar />
     <NuxtPage />
   </div>

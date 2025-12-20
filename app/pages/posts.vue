@@ -10,7 +10,6 @@ const { data } = await useAsyncData(async () => {
   })
   return { tags, posts }
 })
-console.log(data.value?.posts)
 </script>
 
 <template>
@@ -23,21 +22,21 @@ console.log(data.value?.posts)
       />
     </div> -->
     <div
-      v-for="p in data.posts"
+      v-for="p in data?.posts"
       :key="p.hash"
-      class="flex flex-col gap-0 w-full"
+      class="flex justify-between gap-0 w-full hover:brightness-130 cursor-pointer"
     >
-      <h1 class="text-xl">
+      <h1 class="text-sm md:text-xl">
         {{ p.title }}
       </h1>
-      <div class="flex gap-2 text-sm text-secondary-content">
-        <span>{{ p.date.slice(0, 10) }}</span>
-        <span> | </span>
+      <div class="hidden lg:flex gap-2 text-sm text-secondary-content">
         <span v-if="p.tags"> # </span>
         <span
           v-for="tag in p.tags"
           :key="tag"
         > {{ tag }} </span>
+        <span> | </span>
+        <span class="font-mono">{{ p.date.slice(0, 10) }}</span>
       </div>
     </div>
   </div>

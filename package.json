@@ -15,7 +15,7 @@
     "@nuxt/content": "^3.9.0",
     "@nuxt/eslint": "1.12.1",
     "@nuxt/fonts": "0.12.1",
-    "@nuxt/icon": "2.1.1",
+    "@nuxt/icon": "git+https://github.com/liyang8246/nuxt-icon.git",
     "@nuxt/image": "2.0.0",
     "@nuxtjs/color-mode": "4.0.0",
     "@tailwindcss/vite": "^4.1.18",
