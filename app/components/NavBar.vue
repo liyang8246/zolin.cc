@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="flex h-12 px-3 items-center">
+  <div class="flex items-center">
     <NuxtLink
       to="/"
       class="text-xl font-bold"

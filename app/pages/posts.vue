@@ -29,23 +29,15 @@ const postsByYear = computed(() => {
       :key="y"
       class="flex flex-col items-center gap-4 max-w-2xl mx-auto mb-16"
     >
-      <!-- <h1
-        class="text-8xl font-mono text-transparent absolute z-0"
-        :style="{
-          '-webkit-text-stroke': '4px oklch(30% 0.04 256.788)',
-          'left': '-2rem',
-        }"
-      >
-        {{ y }}
-      </h1> -->
       <p class="text-secondary-content mr-auto flex gap-2">
         <span>{{ y }}</span>
         <span> | </span>
         <span>{{ `${postsByYear.get(y)?.length} post${postsByYear.get(y)?.length === 1 ? '' : 's'}` }}</span>
       </p>
-      <div
+      <NuxtLink
         v-for="p in postsByYear.get(y)"
         :key="p.hash"
+        :to="`/p/${p.hash}`"
         class="flex justify-between gap-0 w-full hover:brightness-130 cursor-pointer"
       >
         <h1 class="text-sm md:text-xl">
@@ -60,7 +52,7 @@ const postsByYear = computed(() => {
           <span> | </span>
           <span class="font-mono">{{ p.date.slice(0, 10) }}</span>
         </div>
-      </div>
+      </NuxtLink>
     </div>
   </div>
 </template>
