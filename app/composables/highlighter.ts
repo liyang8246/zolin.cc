@@ -1,15 +1,17 @@
 import type { BundledLanguage, BundledTheme, HighlighterGeneric } from 'shiki'
 import { createHighlighter } from 'shiki'
 
-let highlighter: HighlighterGeneric<BundledLanguage, BundledTheme> | null = null
+let highlighterPromise: Promise<HighlighterGeneric<BundledLanguage, BundledTheme>> | null = null
 
 export const useHighlighter = async (lang: string) => {
-  if (!highlighter) {
-    highlighter = await createHighlighter({
+  if (!highlighterPromise) {
+    highlighterPromise = createHighlighter({
       langs: [lang],
       themes: ['one-dark-pro'],
     })
+    console.log('Highlighter created')
   }
+  const highlighter = await highlighterPromise
   await highlighter.loadLanguage(lang as any)
   return highlighter
 }
