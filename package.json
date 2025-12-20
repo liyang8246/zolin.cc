@@ -12,17 +12,24 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/view": "^6.39.4",
     "@nuxt/content": "^3.9.0",
     "@nuxt/eslint": "1.12.1",
     "@nuxt/fonts": "0.12.1",
     "@nuxt/icon": "git+https://github.com/liyang8246/nuxt-icon.git",
     "@nuxt/image": "2.0.0",
     "@nuxtjs/color-mode": "4.0.0",
+    "@shikijs/langs": "^3.20.0",
+    "@shikijs/themes": "^3.20.0",
     "@tailwindcss/vite": "^4.1.18",
     "better-sqlite3": "^12.5.0",
+    "codemirror": "^6.0.2",
+    "codemirror-shiki": "^0.3.0",
     "eslint": "^9.39.2",
     "fnv-plus": "^1.3.1",
     "nuxt": "^4.2.2",
+    "shiki": "^3.20.0",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
