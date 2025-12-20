@@ -12,7 +12,6 @@ const { data } = await useAsyncData(async () => {
 })
 
 const postsByYear = computed(() => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const grouped = new Map<string, any[]>()
   data.value?.posts.forEach((post) => {
     const year = post.date.slice(0, 4)
