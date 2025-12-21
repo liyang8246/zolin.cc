@@ -46,11 +46,12 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "@nuxt/icon",
       "@parcel/watcher",
       "better-sqlite3",
       "esbuild",
-      "unrs-resolver",
-      "sharp"
+      "sharp",
+      "unrs-resolver"
     ]
   }
 }
