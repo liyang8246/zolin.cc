@@ -23,6 +23,8 @@
     "@shikijs/langs": "^3.20.0",
     "@shikijs/themes": "^3.20.0",
     "@tailwindcss/vite": "^4.1.18",
+    "@vueuse/core": "^14.1.0",
+    "@vueuse/nuxt": "^14.1.0",
     "better-sqlite3": "^12.5.0",
     "codemirror": "^6.0.2",
     "codemirror-shiki": "^0.3.0",

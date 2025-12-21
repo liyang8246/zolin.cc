@@ -13,6 +13,12 @@ const langIcon = {
   rust: 'material-icon-theme:rust',
   typescript: 'material-icon-theme:typescript',
 }[language || 'plaintext']!
+
+const cmRef = ref<HTMLElement>()
+const loadRef = ref<HTMLElement>()
+const { height: cmHeight } = useElementSize(cmRef)
+const containerHeight = computed(() => Math.max(cmHeight.value, 24))
+// debugger
 </script>
 
 <template>
@@ -26,13 +32,27 @@ const langIcon = {
       <span v-if="filename"> | </span>
       <span>{{ language || 'plaintext' }}</span>
     </div>
-    <ClientOnly>
-      <CodeEditor
-        :model-value="code"
-        :language="language || 'text'"
-        :readonly="true"
-        theme="one-dark-pro"
-      />
-    </ClientOnly>
+    <div
+      :style="{ height: containerHeight + 'px' }"
+      class="overflow-hidden transition-[height] duration-500 ease-in-out"
+    >
+      <p
+        v-show="!cmHeight"
+        ref="loadRef"
+        class="text-center"
+      >
+        loading...
+      </p>
+      <div ref="cmRef">
+        <ClientOnly>
+          <CodeEditor
+            :model-value="code"
+            :language="language || 'text'"
+            :readonly="true"
+            theme="one-dark-pro"
+          />
+        </ClientOnly>
+      </div>
+    </div>
   </div>
 </template>
