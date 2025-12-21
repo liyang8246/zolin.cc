@@ -21,13 +21,13 @@ const highlighter = await useHighlighter(language)
 
 const transTheme = EditorView.theme({
   '.cm-gutters': {
-    backgroundColor: 'transparent',
+    backgroundColor: 'oklch(13% 0.028 261.692)',
   },
   '.cm-activeLineGutter': {
-    backgroundColor: 'transparent',
+    backgroundColor: 'oklch(13% 0.028 261.692)',
   },
-  '.cm-lineNumbers': {
-    minWidth: '28px',
+  '.cm-content': {
+    backgroundColor: 'oklch(13% 0.028 261.692)',
   },
 })
 
