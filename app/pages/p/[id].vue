@@ -6,7 +6,8 @@ const { data } = await useAsyncData(async () => {
 </script>
 
 <template>
-  <div class="max-w-2xl mx-auto">
+  <div class="max-w-2xl mx-auto flex flex-col gap-6">
+    <!-- <h1>{{ data }}</h1> -->
     <ContentRenderer
       v-if="data"
       class="flex flex-col gap-4"

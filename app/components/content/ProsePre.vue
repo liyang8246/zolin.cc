@@ -8,11 +8,13 @@ const { code, language, filename } = defineProps<{
 const langIcon = {
   bash: 'material-icon-theme:console',
   javascript: 'material-icon-theme:javascript',
+  plaintext: 'material-icon-theme:document',
   powershell: 'material-icon-theme:powershell',
   python: 'material-icon-theme:python',
   rust: 'material-icon-theme:rust',
+  sql: 'material-icon-theme:database',
   typescript: 'material-icon-theme:typescript',
-}[language || 'plaintext']!
+}[language || 'plaintext'] || 'material-icon-theme:document'
 
 const cmRef = ref<HTMLElement>()
 const { height: cmHeight } = useElementSize(cmRef)
