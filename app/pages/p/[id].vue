@@ -6,7 +6,7 @@ const { data } = await useAsyncData(async () => {
 </script>
 
 <template>
-  <div class="max-w-full md:max-w-2xl lg:max-w-3xl mx-auto flex flex-col gap-6">
+  <div class="w-full md:max-w-2xl lg:max-w-3xl mx-auto flex flex-col gap-6">
     <div>
       <h1 class="text-2xl font-bold mb-1 mt-8 brightness-110">
         {{ data?.title }}

@@ -10,3 +10,7 @@
 .font-default {
   font-family: "Satoshi", sans-serif;
 }
+
+body::-webkit-scrollbar {
+  width: 0;
+}
