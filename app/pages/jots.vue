@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <div>jots</div>
+  <div>coming soon</div>
 </template>

@@ -7,7 +7,26 @@ const { data } = await useAsyncData(async () => {
 
 <template>
   <div class="max-w-2xl mx-auto flex flex-col gap-6">
-    <!-- <h1>{{ data }}</h1> -->
+    <div>
+      <h1 class="text-2xl font-bold mb-1">
+        {{ data?.title }}
+      </h1>
+      <div class="flex items-center gap-2 text-secondary-content">
+        <Icon name="tabler:calendar-week-filled" />
+        <span class="font-mono text-sm">{{ data?.date.slice(0, 10) }}</span>
+        <Icon name="tabler:clock" />
+        <span class="text-sm">{{ `${data?.body.value.length} mins read` }}</span>
+        <Icon
+          v-if="data?.tags"
+          name="tabler:tag"
+        />
+        <span
+          v-for="tag in data?.tags"
+          :key="tag"
+          class="text-sm"
+        > {{ tag }} </span>
+      </div>
+    </div>
     <ContentRenderer
       v-if="data"
       class="flex flex-col gap-4"
