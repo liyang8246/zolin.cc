@@ -4,7 +4,7 @@ const { data: quote } = await useAsyncData('quote', () => Promise.resolve(randQu
 
 <template>
   <div class="flex items-center justify-center pt-8 md:pt-32">
-    <div class="flex flex-col gap-4 w-fit scale-75 md:scale-100">
+    <div class="flex flex-col gap-4 w-fit scale-[70%] md:scale-100">
       <div class="flex gap-4">
         <NuxtImg
           src="/profile.jpg"
@@ -29,7 +29,7 @@ const { data: quote } = await useAsyncData('quote', () => Promise.resolve(randQu
         </div>
       </div>
       <div class="flex items-center gap-2">
-        <p class="font-bold w-24">
+        <p class="font-bold w-20">
           Languages
         </p>
         <Badge
@@ -46,7 +46,7 @@ const { data: quote } = await useAsyncData('quote', () => Promise.resolve(randQu
         />
       </div>
       <div class="flex items-center gap-2">
-        <p class="font-bold w-24">
+        <p class="font-bold w-20">
           Tech Stack
         </p>
         <Badge
@@ -67,7 +67,7 @@ const { data: quote } = await useAsyncData('quote', () => Promise.resolve(randQu
         />
       </div>
       <div class="flex items-center gap-2">
-        <p class="font-bold w-24">
+        <p class="font-bold w-20">
           Dev Tools
         </p>
         <Badge
