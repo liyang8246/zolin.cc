@@ -1,6 +1,6 @@
 {
+    "installCommand": "pnpm clone:content && pnpm install",
     "buildCommand": "pnpm generate",
-    "installCommand": "pnpm install",
     "framework": "nuxtjs",
     "outputDirectory": ".output/public"
 }
