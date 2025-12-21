@@ -15,10 +15,8 @@ const langIcon = {
 }[language || 'plaintext']!
 
 const cmRef = ref<HTMLElement>()
-const loadRef = ref<HTMLElement>()
 const { height: cmHeight } = useElementSize(cmRef)
 const containerHeight = computed(() => Math.max(cmHeight.value, 24))
-// debugger
 </script>
 
 <template>
@@ -38,7 +36,6 @@ const containerHeight = computed(() => Math.max(cmHeight.value, 24))
     >
       <p
         v-show="!cmHeight"
-        ref="loadRef"
         class="text-center"
       >
         loading...

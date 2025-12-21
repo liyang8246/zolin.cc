@@ -86,4 +86,9 @@ watch(model, (newValue) => {
 .cm-scroller::-webkit-scrollbar-thumb:hover {
   background-color: oklch(37.3% 0.034 259.733);
 }
+
+.cm-content {
+  font-family: 'Fira Mono', monospace;
+  font-size: 14px;
+}
 </style>
