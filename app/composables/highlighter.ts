@@ -9,7 +9,6 @@ export const useHighlighter = async (lang: string) => {
       langs: [lang],
       themes: ['one-dark-pro'],
     })
-    console.log('Highlighter created')
   }
   const highlighter = await highlighterPromise
   await highlighter.loadLanguage(lang as any)
