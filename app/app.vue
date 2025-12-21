@@ -3,10 +3,10 @@
 
 <template>
   <div class="bg-primary">
-    <div class="bg-linear-to-b from-slate-900 from-[128px] to-transparent to-[768px] min-h-screen text-primary-content p-4 md:p-8 font-default relative">
+    <div class="flex flex-col bg-linear-to-b from-slate-900 from-[128px] to-transparent to-[768px] min-h-screen text-primary-content p-4 md:p-8 font-default">
       <NavBar />
       <NuxtPage />
-      <div class="absolute bottom-4 left-4 text-sm text-gray-500">
+      <div class="text-sm text-gray-500 mt-auto">
         CC BY-NC-SA 4.0
       </div>
     </div>

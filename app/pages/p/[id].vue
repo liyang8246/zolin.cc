@@ -8,11 +8,11 @@ const { data } = await useAsyncData(async () => {
 <template>
   <div class="max-w-2xl mx-auto flex flex-col gap-6">
     <div>
-      <h1 class="text-2xl font-bold mb-1">
+      <h1 class="text-2xl font-bold mb-1 mt-8 brightness-110">
         {{ data?.title }}
       </h1>
       <div class="flex items-center gap-2 text-secondary-content">
-        <Icon name="tabler:calendar-week-filled" />
+        <Icon name="tabler:calendar-week" />
         <span class="font-mono text-sm">{{ data?.date.slice(0, 10) }}</span>
         <Icon name="tabler:clock" />
         <span class="text-sm">{{ `${data?.body.value.length} mins read` }}</span>
@@ -32,5 +32,8 @@ const { data } = await useAsyncData(async () => {
       class="flex flex-col gap-4"
       :value="data"
     />
+    <p class="mb-4">
+      --- 评论区施工中🚧 ---
+    </p>
   </div>
 </template>
