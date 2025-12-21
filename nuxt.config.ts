@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/fonts',
     '@vueuse/nuxt',
+    '@nuxthub/core',
   ],
   devtools: { enabled: true },
   app: {
@@ -29,6 +30,9 @@ export default defineNuxtConfig({
     },
   },
   compatibilityDate: '2024-04-03',
+  hub: {
+    db: 'postgresql',
+  },
   vite: {
     plugins: [
       tailwindcss(),
