@@ -11,6 +11,12 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
   ],
   devtools: { enabled: true },
+  app: {
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in',
+    },
+  },
   css: ['~/assets/main.css'],
   colorMode: {
     preference: 'dark',
