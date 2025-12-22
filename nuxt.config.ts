@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/fonts',
     '@vueuse/nuxt',
-    '@nuxthub/core',
+    '@nuxthub/core-nightly',
   ],
   devtools: { enabled: true },
   app: {
@@ -34,6 +34,9 @@ export default defineNuxtConfig({
     db: {
       dialect: 'postgresql',
       driver: 'neon-http',
+      connection: {
+        connectionString: process.env.DATABASE_URL,
+      },
     },
   },
   vite: {
