@@ -16,6 +16,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Zolin\'s blog',
+      htmlAttrs: { lang: 'zh-CN' },
     },
     pageTransition: {
       name: 'page',

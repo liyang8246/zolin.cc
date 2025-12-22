@@ -71,7 +71,11 @@ watch(model, (newValue) => {
 
 <template>
   <div class="relative">
-    <div ref="container" />
+    <div
+      ref="container"
+      role="textbox"
+      :aria-label="`${language} code editor`"
+    />
   </div>
 </template>
 
