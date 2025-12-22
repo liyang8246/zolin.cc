@@ -16,7 +16,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Zolin',
-      titleTemplate: '%s',
     },
     pageTransition: {
       name: 'page',
