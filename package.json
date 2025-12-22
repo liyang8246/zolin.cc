@@ -16,6 +16,7 @@
     "@codemirror/state": "^6.5.2",
     "@codemirror/view": "^6.39.4",
     "@electric-sql/pglite": "^0.3.14",
+    "@neondatabase/serverless": "^1.0.2",
     "@nuxt/content": "^3.9.0",
     "@nuxt/eslint": "1.12.1",
     "@nuxt/fonts": "0.12.1",
