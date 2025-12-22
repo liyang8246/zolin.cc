@@ -18,6 +18,10 @@ const postsByYear = computed(() => {
   })
   return grouped
 })
+
+useHead({
+  title: 'Zolin | Posts',
+})
 </script>
 
 <template>

@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
-      title: 'Zolin',
+      title: 'Zolin\'s blog',
     },
     pageTransition: {
       name: 'page',

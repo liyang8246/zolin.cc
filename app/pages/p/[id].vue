@@ -11,7 +11,7 @@ if (!data.value) {
 }
 
 useHead({
-  title: data.value?.title ? `Zolin | ${data.value.title}` : 'Zolin',
+  title: data.value?.title ? `${data.value.title} | Zolin` : 'Zolin',
 })
 </script>
 

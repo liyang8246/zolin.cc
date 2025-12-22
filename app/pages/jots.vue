@@ -9,6 +9,10 @@ const { data: jots } = await useAsyncData(async () => {
   })
   return items
 }, { default: () => [] })
+
+useHead({
+  title: 'Zolin | Jots',
+})
 </script>
 
 <template>
