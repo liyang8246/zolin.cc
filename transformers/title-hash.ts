@@ -13,7 +13,6 @@ export default defineTransformer({
   name: 'title-hash',
   extensions: ['.md'],
   transform(file) {
-    console.log(file)
     const title = id2Title(file.id)
     const hash = fnvHash(title, 32).hex()
     const path = `/p/${hash}`

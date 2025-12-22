@@ -1,11 +1,17 @@
 <script lang="ts" setup>
 const route = useRoute()
 const { data } = await useAsyncData(async () => {
-  return await queryCollection('posts').where('hash', '=', route.params.id).first()
-})
+  const post = await queryCollection('posts').where('hash', '=', route.params.id).first()
+  const jot = await queryCollection('jots').where('hash', '=', route.params.id).first()
+  return jot ?? post
+}, { default: () => null })
+
+if (!data.value) {
+  throw createError({ status: 404, statusText: 'Page Not Found' })
+}
 
 useHead({
-  title: `Zolin | ${data.value?.title}`,
+  title: data.value?.title ? `Zolin | ${data.value.title}` : 'Zolin',
 })
 </script>
 

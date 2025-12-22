@@ -1,19 +1,18 @@
 <script lang="ts" setup>
-const { data } = await useAsyncData(async () => {
-  const posts = await queryCollection('posts').select('title', 'tags', 'hash', 'date').order('date', 'DESC').all()
-  posts.map(post => post.tags = post.tags || [])
-  const tags = new Map<string, number>()
-  posts.forEach((post) => {
-    post.tags!.forEach((tag) => {
-      tags.set(tag, (tags.get(tag) || 0) + 1)
-    })
+const { data: posts } = await useAsyncData(async () => {
+  const items = await queryCollection('posts')
+    .select('title', 'tags', 'hash', 'date')
+    .order('date', 'DESC')
+    .all()
+  items.forEach((item) => {
+    item.tags = item.tags || []
   })
-  return { tags, posts }
-})
+  return items
+}, { default: () => [] })
 
 const postsByYear = computed(() => {
   const grouped = new Map<string, any[]>()
-  data.value?.posts.forEach((post) => {
+  posts.value.forEach((post) => {
     const year = post.date.slice(0, 4)
     grouped.set(year, [...(grouped.get(year) || []), post])
   })
@@ -37,12 +36,12 @@ const postsByYear = computed(() => {
         v-for="p in postsByYear.get(y)"
         :key="p.hash"
         :to="`/p/${p.hash}`"
-        class="flex justify-between gap-0 w-full hover:brightness-130 cursor-pointer"
+        class="flex justify-between w-full hover:brightness-130 cursor-pointer"
       >
         <h1 class="text-sm md:text-xl">
           {{ p.title }}
         </h1>
-        <div class="hidden lg:flex gap-2 text-sm text-secondary-content">
+        <div class="hidden lg:flex items-center gap-2 text-sm text-secondary-content">
           <span v-if="p.tags"> # </span>
           <span
             v-for="tag in p.tags"
