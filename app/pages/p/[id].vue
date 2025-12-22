@@ -11,12 +11,12 @@ if (!data.value) {
 }
 
 useHead({
-  title: data.value?.title ? `${data.value.title} | Zolin` : 'Zolin',
+  title: data.value?.title ? `${data.value.title} | Zolin` : 'Zolin\'s blog',
 })
 
 useSeoMeta({
   description: data.value?.description,
-  ogTitle: data.value?.title,
+  ogTitle: data.value?.title ? `Zolin | ${data.value.title}` : 'Zolin\'s blog',
 })
 </script>
 
