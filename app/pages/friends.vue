@@ -23,7 +23,7 @@ useHead({
       >
         <NuxtImg
           :src="f.favicon"
-          class="size-8 rounded"
+          class="size-8 rounded opacity-75"
         />
         <div class="text-xl">{{ f.name }}</div>
         <div class="mx-auto" />

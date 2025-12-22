@@ -13,6 +13,11 @@ if (!data.value) {
 useHead({
   title: data.value?.title ? `${data.value.title} | Zolin` : 'Zolin',
 })
+
+useSeoMeta({
+  description: data.value?.description,
+  ogTitle: data.value?.title,
+})
 </script>
 
 <template>
