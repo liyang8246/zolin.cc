@@ -23,6 +23,10 @@ export default defineNuxtConfig({
     preference: 'dark',
   },
   content: {
+    database: {
+      type: 'postgresql',
+      url: process.env.DATABASE_URL!,
+    },
     build: {
       transformers: [
         './transformers/title-hash.ts',
