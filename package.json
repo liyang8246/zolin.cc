@@ -27,6 +27,7 @@
     "@shikijs/langs": "^3.20.0",
     "@shikijs/themes": "^3.20.0",
     "@tailwindcss/vite": "^4.1.18",
+    "@vercel/analytics": "^1.6.1",
     "@vueuse/core": "^14.1.0",
     "@vueuse/nuxt": "^14.1.0",
     "better-sqlite3": "^12.5.0",

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Analytics } from '@vercel/analytics/nuxt'
 </script>
 
 <template>
@@ -11,6 +12,7 @@
       </div>
     </div>
   </div>
+  <Analytics />
 </template>
 
 <style>
