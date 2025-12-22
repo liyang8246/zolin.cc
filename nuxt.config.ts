@@ -33,7 +33,6 @@ export default defineNuxtConfig({
   hub: {
     db: {
       dialect: 'postgresql',
-      driver: 'neon-http',
       connection: {
         connectionString: process.env.DATABASE_URL,
       },
