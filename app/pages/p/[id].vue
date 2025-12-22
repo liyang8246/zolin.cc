@@ -3,6 +3,10 @@ const route = useRoute()
 const { data } = await useAsyncData(async () => {
   return await queryCollection('posts').where('hash', '=', route.params.id).first()
 })
+
+useHead({
+  title: `Zolin | ${data.value?.title}`,
+})
 </script>
 
 <template>

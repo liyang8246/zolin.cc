@@ -13,6 +13,10 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   app: {
+    head: {
+      title: 'Zolin',
+      titleTemplate: '%s',
+    },
     pageTransition: {
       name: 'page',
       mode: 'out-in',
