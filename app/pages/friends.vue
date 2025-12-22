@@ -3,6 +3,7 @@ const friends = [
   { favicon: 'https://blog.halfsweet.cn/img/Headshot.jpg', name: 'HalfSweet\'s Blog', url: 'https://blog.halfsweet.cn', on: '2025-12-22' },
   { favicon: 'https://jelasin.github.io/images/touxiang.jpg', name: 'Jelasin\'s Blog', url: 'https://jelasin.github.io', on: '2025-12-22' },
   { favicon: 'https://kevinguo.ink/favicon/favicon-32x32.png', name: 'KevinGuo ink', url: 'https://kevinguo.ink', on: '2025-12-23' },
+  { favicon: 'https://book.paperee.guru/ebcat.jpg', name: '纸片君ee的博客', url: 'https://paperee.guru', on: '2025-12-23' },
 ]
 
 useHead({
