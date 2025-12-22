@@ -2,6 +2,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   modules: [
+    '@nuxtjs/sitemap',
     '@nuxt/content',
     '@nuxtjs/color-mode',
     '@nuxt/eslint',
@@ -23,6 +24,10 @@ export default defineNuxtConfig({
     },
   },
   css: ['~/assets/main.css'],
+  site: {
+    url: 'https://zolin.cc',
+    name: 'Zolin',
+  },
   colorMode: {
     preference: 'dark',
   },

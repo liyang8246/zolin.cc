@@ -1,5 +1,5 @@
 import { defineTransformer } from '@nuxt/content'
-import { hash } from 'fnv-plus'
+import { hash as fnvHash } from 'fnv-plus'
 
 function id2Title(id: string): string {
   const fileName = id.split('/').pop()
@@ -13,11 +13,15 @@ export default defineTransformer({
   name: 'title-hash',
   extensions: ['.md'],
   transform(file) {
+    console.log(file)
     const title = id2Title(file.id)
+    const hash = fnvHash(title, 32).hex()
+    const path = `/p/${hash}`
     return {
       ...file,
       title,
-      hash: hash(title, 32).hex(),
+      hash,
+      path,
     }
   },
 })

@@ -24,6 +24,7 @@
     "@nuxt/image": "2.0.0",
     "@nuxthub/core-nightly": "0.10.0-20251210-113644-c25eff9",
     "@nuxtjs/color-mode": "4.0.0",
+    "@nuxtjs/sitemap": "^7.5.0",
     "@shikijs/langs": "^3.20.0",
     "@shikijs/themes": "^3.20.0",
     "@tailwindcss/vite": "^4.1.18",
