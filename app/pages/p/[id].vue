@@ -15,7 +15,7 @@ useHead({
 })
 
 useSeoMeta({
-  description: data.value?.description,
+  description: data.value?.seo.description,
   ogTitle: data.value?.title ? `Zolin | ${data.value.title}` : 'Zolin\'s blog',
 })
 </script>
