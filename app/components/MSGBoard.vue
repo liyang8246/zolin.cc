@@ -54,7 +54,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col max-w-md md:max-w-200 w-full h-84 py-4 bg-zinc-950 rounded-xl">
+  <div class="flex flex-col max-w-md md:max-w-160 w-full h-84 py-4 bg-zinc-950 rounded-xl">
     <div class="h-full overflow-hidden relative">
       <div
         v-for="track in TRACKS_NUM"
