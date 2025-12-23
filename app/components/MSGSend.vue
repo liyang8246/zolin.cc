@@ -21,7 +21,6 @@ const { execute: fetchGithubUser, isLoading: isFetchingUser } = useAsyncState(
         link: '',
         name: '错误',
       }
-      console.warn('Failed to fetch GitHub user:', form.githubName)
     }
   },
   null,
