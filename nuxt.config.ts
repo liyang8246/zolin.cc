@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/fonts',
     '@vueuse/nuxt',
-    '@nuxthub/core-nightly',
+    '@nuxthub/core',
   ],
   devtools: { enabled: true },
   app: {
