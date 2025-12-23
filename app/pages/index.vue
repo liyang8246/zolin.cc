@@ -113,8 +113,8 @@ const { data: recentPosts } = await useAsyncData('recent-posts', () =>
 
     <div class="mx-auto my-4 h-px md:max-w-5xl bg-linear-to-r from-transparent via-slate-800 to-transparent" />
 
-    <div class="flex gap-4 justify-center">
-      <div class="flex flex-col items-center justify-center gap-4">
+    <div class="flex flex-col items-center md:flex-row gap-4 justify-center">
+      <div class="flex flex-col items-center w-full md:w-fit justify-center gap-4">
         <NuxtLink
           v-for="post in recentPosts"
           :key="post.hash"
