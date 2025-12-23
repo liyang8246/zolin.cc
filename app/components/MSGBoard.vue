@@ -46,27 +46,6 @@ const emitNewDanmaku = () => {
   }
 }
 
-const form = reactive({ githubName: '', messageContent: '' })
-const { execute: sendMessage, isLoading } = useAsyncState(
-  async () => {
-    if (!form.githubName.trim() || !form.messageContent.trim()) return
-
-    const { avatar, link, name } = await githubProfile(form.githubName.trim())
-    const newDanmaku: NewDanmaku = {
-      avatar,
-      link,
-      name,
-      content: form.messageContent.trim(),
-    }
-
-    const [created] = await $fetch('/api/danmaku', { method: 'POST', body: newDanmaku })
-    if (created) queue.push({ ...created, at: new Date(created.at) })
-    form.githubName = form.messageContent = ''
-  },
-  null,
-  { immediate: false },
-)
-
 onMounted(() => {
   emitNewDanmaku()
   const timer = setInterval(emitNewDanmaku, 500)
@@ -94,42 +73,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
-    <div class="flex gap-2 px-2 h-8">
-      <input
-        v-model="form.githubName"
-        type="text"
-        placeholder="GitHub Name"
-        class="border-b flex-1 focus:outline-none focus:brightness-125"
-      >
-      <button
-        class="size-8 flex items-center justify-center"
-        :disabled="isLoading"
-        @click="sendMessage()"
-      >
-        <Icon
-          name="tabler:send-2"
-          class="text-xl cursor-pointer brightness-75 hover:brightness-100 transition"
-          :class="{ 'opacity-50': isLoading }"
-        />
-      </button>
-      <input
-        v-model="form.messageContent"
-        type="text"
-        placeholder="欢迎大家留言 (✧ω✧)"
-        class="border-b flex-3 focus:outline-none focus:brightness-125"
-      >
-      <button
-        class="size-8 flex items-center justify-center"
-        :disabled="isLoading"
-        @click="sendMessage()"
-      >
-        <Icon
-          name="tabler:send-2"
-          class="text-xl cursor-pointer brightness-75 hover:brightness-100 transition"
-          :class="{ 'opacity-50': isLoading }"
-        />
-      </button>
-    </div>
+    <SendMessage @message-sent="msg => queue.push(msg)" />
   </div>
 </template>
 
