@@ -10,7 +10,7 @@ import { SpeedInsights } from '@vercel/speed-insights/nuxt'
       <main>
         <NuxtPage />
       </main>
-      <div class="text-sm text-gray-500 mt-auto">
+      <div class="text-sm text-gray-500 mt-auto pt-2">
         CC BY-NC-SA 4.0
       </div>
     </div>

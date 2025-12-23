@@ -13,7 +13,7 @@ const { data: recentPosts } = await useAsyncData('recent-posts', () =>
 <template>
   <div>
     <div class="flex items-center justify-center pt-8 md:pt-32">
-      <div class="flex flex-col gap-4 w-fit scale-[70%] md:scale-100">
+      <div class="flex flex-col gap-4 w-fit scale-[70%] sm:scale-100">
         <div class="flex gap-4">
           <NuxtImg
             src="/profile.jpg"
