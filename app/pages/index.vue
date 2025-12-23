@@ -5,7 +5,7 @@ const { data: recentPosts } = await useAsyncData('recent-posts', () =>
   queryCollection('posts')
     .select('title', 'date', 'tags', 'hash')
     .order('date', 'DESC')
-    .limit(3)
+    .limit(2)
     .all(),
 )
 </script>
@@ -110,38 +110,39 @@ const { data: recentPosts } = await useAsyncData('recent-posts', () =>
         </p>
       </div>
     </div>
-    <div class="flex items-center gap-4 mb-8 max-w-4xl opacity-50 mx-auto mt-8">
-      <div class="h-px flex-1 bg-linear-to-r from-transparent via-slate-600 to-transparent" />
-      <span class="font-mono text-sm tracking-widest">LATEST POSTS</span>
-      <div class="h-px flex-1 bg-linear-to-r from-transparent via-slate-600 to-transparent" />
-    </div>
-    <div class="flex flex-col lg:flex-row items-center justify-center gap-4">
-      <NuxtLink
-        v-for="post in recentPosts"
-        :key="post.hash"
-        :to="`/p/${post.hash}`"
-        class="flex flex-col gap-2 w-full h-40 max-w-md md:max-w-5xl lg:w-xs bg-zinc-950 transition-all p-4 rounded-xl cursor-pointer hover:brightness-130 hover:scale-[102%]"
-      >
-        <h1 class="text-lg mb-auto">
-          {{ post.title }}
-        </h1>
-        <div class="flex items-center gap-1">
-          <Icon name="tabler:calendar-week" />
-          <span class="text-sm">
-            {{ post.date.slice(0, 10) }}
-          </span>
-        </div>
-        <div class="flex items-center gap-1">
-          <Icon name="tabler:tag" />
-          <span
-            v-for="tag in post.tags"
-            :key="tag"
-            class="text-sm"
-          >
-            {{ tag }}
-          </span>
-        </div>
-      </NuxtLink>
+
+    <div class="mx-auto my-4 h-px md:max-w-5xl bg-linear-to-r from-transparent via-slate-800 to-transparent" />
+
+    <div class="flex gap-4 justify-center">
+      <div class="flex flex-col items-center justify-center gap-4">
+        <NuxtLink
+          v-for="post in recentPosts"
+          :key="post.hash"
+          :to="`/p/${post.hash}`"
+          class="flex flex-col gap-2 w-full h-40 max-w-md lg:w-xs bg-zinc-950 transition-all p-4 rounded-xl cursor-pointer hover:brightness-130 hover:scale-105"
+        >
+          <h1 class="text-lg mb-auto">
+            {{ post.title }}
+          </h1>
+          <div class="flex items-center gap-1">
+            <Icon name="tabler:calendar-week" />
+            <span class="text-sm">
+              {{ post.date.slice(0, 10) }}
+            </span>
+          </div>
+          <div class="flex items-center gap-1">
+            <Icon name="tabler:tag" />
+            <span
+              v-for="tag in post.tags"
+              :key="tag"
+              class="text-sm"
+            >
+              {{ tag }}
+            </span>
+          </div>
+        </NuxtLink>
+      </div>
+      <MSGBoard />
     </div>
   </div>
 </template>
