@@ -19,8 +19,9 @@ const postsByYear = computed(() => {
   return grouped
 })
 
-useHead({
+useSeoMeta({
   title: 'Zolin | Posts',
+  description: '这里是文章列表, 分享关于编程 技术 电子的深入内容.',
 })
 </script>
 

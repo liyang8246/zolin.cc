@@ -6,8 +6,9 @@ const friends = [
   { favicon: 'https://book.paperee.guru/ebcat.jpg', name: '纸片君ee的博客', url: 'https://paperee.guru', on: '2025-12-23' },
 ]
 
-useHead({
+useSeoMeta({
   title: 'Zolin | Friends',
+  description: '友情链接和博客推荐.',
 })
 </script>
 

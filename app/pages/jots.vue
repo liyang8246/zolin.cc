@@ -10,8 +10,9 @@ const { data: jots } = await useAsyncData(async () => {
   return items
 }, { default: () => [] })
 
-useHead({
+useSeoMeta({
   title: 'Zolin | Jots',
+  description: '这里是随手记录, 分享简短的想法和见解',
 })
 </script>
 
