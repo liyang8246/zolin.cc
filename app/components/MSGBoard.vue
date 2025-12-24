@@ -40,10 +40,11 @@ const emitNewDanmaku = () => {
   const sortedTracks = Array.from({ length: TRACKS_NUM }, (_, i) => ({
     index: i,
     lastTime: trackLastEmitTime.get(i)!,
-  })).sort((a, b) => a.lastTime - b.lastTime)
+  })).sort((a, b) => a.lastTime - b.lastTime).slice(0, count * 2)
+  const suffledTracks = shuffle(sortedTracks)
 
   for (let i = 0; i < Math.min(count, queue.length); i++) {
-    const track = sortedTracks[i]!.index
+    const track = suffledTracks[i]!.index
     trackItems.value.get(track)!.push(queue.shift()!)
     trackLastEmitTime.set(track, now)
   }
@@ -51,7 +52,7 @@ const emitNewDanmaku = () => {
 
 onMounted(() => {
   emitNewDanmaku()
-  const timer = setInterval(emitNewDanmaku, 1000)
+  const timer = setInterval(emitNewDanmaku, 750)
   onUnmounted(() => clearInterval(timer))
 })
 </script>
