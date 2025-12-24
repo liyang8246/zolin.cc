@@ -84,7 +84,7 @@ onMounted(() => {
 
 @keyframes scroll-left {
   from {
-    transform: translateX(calc(200 * 4px));
+    transform: translateX(640px);
   }
   to {
     transform: translateX(-100%);
