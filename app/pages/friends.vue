@@ -14,6 +14,9 @@ useSeoMeta({
 
 <template>
   <div class="pt-8 md:pt-32">
+    <h1 class="hidden">
+      友情链接
+    </h1>
     <div class="flex flex-col gap-4 max-w-2xl mx-auto">
       <NuxtLink
         v-for="f in friends"

@@ -18,6 +18,9 @@ useSeoMeta({
 
 <template>
   <div class="pt-8 md:pt-32">
+    <h1 class="hidden">
+      随手记录
+    </h1>
     <div class="flex flex-col items-center gap-4 max-w-2xl mx-auto">
       <NuxtLink
         v-for="j in jots"

@@ -27,6 +27,9 @@ useSeoMeta({
 
 <template>
   <div class="pt-8 md:pt-32">
+    <h1 class="hidden">
+      文章列表
+    </h1>
     <div
       v-for="y in postsByYear.keys()"
       :key="y"
