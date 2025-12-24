@@ -6,6 +6,19 @@ const emit = defineEmits<{
 const form = reactive({ githubName: '', messageContent: '' })
 const githubUser = ref<{ avatar: string, link: string, name: string } | null>(null)
 
+function getCharLength(str: string): number {
+  let length = 0
+  for (const char of str) length += char.charCodeAt(0) < 128 ? 1 : 3
+  return length
+}
+
+function limitInput() {
+  const maxLength = 45
+  while (getCharLength(form.messageContent) > maxLength) {
+    form.messageContent = form.messageContent.slice(0, -1)
+  }
+}
+
 const { execute: fetchGithubUser, isLoading: isFetchingUser } = useAsyncState(
   async () => {
     if (!form.githubName.trim()) return
@@ -91,7 +104,12 @@ const canSendMessage = computed(() => githubUser.value?.link && form.messageCont
         type="text"
         placeholder="欢迎大家留言"
         class="border-b border-zinc-600 flex-1 transition-all focus:outline-none focus:brightness-125"
+        @input="limitInput"
       >
+      <span
+        v-if="form.messageContent"
+        class="flex items-center text-xs"
+      >{{ `${getCharLength(form.messageContent)}/45` }}</span>
       <button
         class="size-8 flex items-center justify-center cursor-pointer disabled:brightness-50 disabled:cursor-not-allowed brightness-75 hover:brightness-100"
         :disabled="!canSendMessage || isSendingMessage"
