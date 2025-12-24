@@ -1,5 +1,5 @@
 <template>
-  <code class="prose-code text-sm bg-secondary rounded">
+  <code class="prose-code text-sm bg-secondary/50 border border-secondary/75 rounded">
     <slot />
   </code>
 </template>
