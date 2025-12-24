@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { shuffle } from 'fast-shuffle'
+
 // 常量配置
 const TRACKS_NUM = 8
 const POP_PER_SECOND: [number, number] = [0, 3]
@@ -6,10 +8,11 @@ const POP_PER_SECOND: [number, number] = [0, 3]
 const { data: messages } = await useFetch('/api/danmaku', { method: 'GET' })
 
 // 弹幕队列
-const queue: Danmaku[] = (messages.value || []).map(msg => ({
+const queue: Danmaku[] = shuffle(messages.value || []).map(msg => ({
   ...msg,
   at: new Date(msg.at),
 }))
+
 // 轨道信息
 const trackItems = ref<Map<number, Danmaku[]>>(new Map())
 const trackLastEmitTime = new Map<number, number>()
