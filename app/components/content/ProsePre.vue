@@ -8,6 +8,7 @@ const { code, language, filename } = defineProps<{
 const langIcon = {
   bash: 'material-icon-theme:console',
   javascript: 'material-icon-theme:javascript',
+  json: 'material-icon-theme:json',
   plaintext: 'material-icon-theme:document',
   powershell: 'material-icon-theme:powershell',
   python: 'material-icon-theme:python',
@@ -28,9 +29,7 @@ const containerHeight = computed(() => Math.max(cmHeight.value, 24))
         :name="langIcon"
         mode="svg"
       />
-      <span v-if="filename"> {{ filename }} </span>
-      <span v-if="filename"> | </span>
-      <span>{{ language || 'plaintext' }}</span>
+      <span> {{ filename ?? language ?? 'plaintext' }} </span>
     </div>
     <div
       :style="{ height: containerHeight + 'px' }"
