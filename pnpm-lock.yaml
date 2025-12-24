@@ -8,6 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@cap.js/server':
+        specifier: ^4.0.5
+        version: 4.0.5
+      '@cap.js/wasm':
+        specifier: ^0.0.6
+        version: 0.0.6
+      '@cap.js/widget':
+        specifier: ^0.1.33
+        version: 0.1.33
       '@codemirror/state':
         specifier: ^6.5.3
         version: 6.5.3
@@ -270,6 +279,15 @@ packages:
         optional: true
       commander:
         optional: true
+
+  '@cap.js/server@4.0.5':
+    resolution: {integrity: sha512-S902YIyGyiriNaexfqTzMy5ixxSb3/jYSJwr2gAY9d7XXoYftcifgij/11pjuiU72Ogm6XKZOggDB2DtjRMyww==}
+
+  '@cap.js/wasm@0.0.6':
+    resolution: {integrity: sha512-QhQPZ6QKQeUdjhPM1I6Y3TKhc4Q59wfFHGpkwUW1BYqHlaLUnsMvHX0c1Bt45ZDBzKD0cYj7V7fdHYkPNKN8MQ==}
+
+  '@cap.js/widget@0.1.33':
+    resolution: {integrity: sha512-opQqn8sWIe4tIFSkQ06pAiGzlljCIqQ7QWEqLt2sV6MlQLrmQT8EUNWAgfrB1hTFoYygutnVViWEaaJr3Vb44A==}
 
   '@capsizecss/unpack@3.0.1':
     resolution: {integrity: sha512-8XqW8xGn++Eqqbz3e9wKuK7mxryeRjs4LOHLxbh2lwKeSbuNR4NFifDZT4KzvjU6HMOPbiNTsWpniK5EJfTWkg==}
@@ -6166,6 +6184,12 @@ snapshots:
     optionalDependencies:
       cac: 6.7.14
       citty: 0.1.6
+
+  '@cap.js/server@4.0.5': {}
+
+  '@cap.js/wasm@0.0.6': {}
+
+  '@cap.js/widget@0.1.33': {}
 
   '@capsizecss/unpack@3.0.1':
     dependencies:

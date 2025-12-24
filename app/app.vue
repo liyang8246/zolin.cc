@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { Analytics } from '@vercel/analytics/nuxt'
 import { SpeedInsights } from '@vercel/speed-insights/nuxt'
+
+const isDev = import.meta.dev
 </script>
 
 <template>
@@ -15,8 +17,8 @@ import { SpeedInsights } from '@vercel/speed-insights/nuxt'
       </div>
     </div>
   </div>
-  <Analytics />
-  <SpeedInsights />
+  <Analytics v-if="!isDev" />
+  <SpeedInsights v-if="!isDev" />
 </template>
 
 <style>
