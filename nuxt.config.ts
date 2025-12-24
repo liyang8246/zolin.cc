@@ -49,6 +49,7 @@ export default defineNuxtConfig({
         remarkPlugins: {
           'remark-wiki-link': {
             options: {
+              pageResolver: (name: string) => [name],
               hrefTemplate: (permalink: string) => `/p/${fnvHash(permalink, 32).hex()}`,
             },
           },
