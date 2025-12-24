@@ -3,7 +3,7 @@ import { shuffle } from 'fast-shuffle'
 
 // 常量配置
 const TRACKS_NUM = 6
-const POP_PER_SECOND: [number, number] = [0, 4]
+const POP_PER_SECOND: [number, number] = [1, 2]
 
 const { data: messages } = await useFetch('/api/danmaku', { method: 'GET' })
 
@@ -33,7 +33,7 @@ const onAnimationEnd = (track: number, danmaku: Danmaku) => {
 
 // 发射弹幕
 const emitNewDanmaku = () => {
-  const count = Math.floor(Math.random() * (POP_PER_SECOND[1] - POP_PER_SECOND[0] + 1)) + POP_PER_SECOND[0]
+  const count = Math.floor(Math.random() * (POP_PER_SECOND[1] - POP_PER_SECOND[0])) + POP_PER_SECOND[0]
   if (queue.length === 0) return
 
   const now = Date.now()
@@ -51,7 +51,7 @@ const emitNewDanmaku = () => {
 
 onMounted(() => {
   emitNewDanmaku()
-  const timer = setInterval(emitNewDanmaku, 2000)
+  const timer = setInterval(emitNewDanmaku, 1000)
   onUnmounted(() => clearInterval(timer))
 })
 </script>
