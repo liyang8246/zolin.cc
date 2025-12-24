@@ -3,7 +3,7 @@ import { shuffle } from 'fast-shuffle'
 
 // 常量配置
 const TRACKS_NUM = 6
-const POP_PER_SECOND: [number, number] = [0, 3]
+const POP_PER_SECOND: [number, number] = [0, 4]
 
 const { data: messages } = await useFetch('/api/danmaku', { method: 'GET' })
 
@@ -51,7 +51,7 @@ const emitNewDanmaku = () => {
 
 onMounted(() => {
   emitNewDanmaku()
-  const timer = setInterval(emitNewDanmaku, 1000)
+  const timer = setInterval(emitNewDanmaku, 2000)
   onUnmounted(() => clearInterval(timer))
 })
 </script>
