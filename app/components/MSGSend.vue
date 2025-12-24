@@ -55,6 +55,8 @@ const { execute: sendMessage, isLoading: isSendingMessage } = useAsyncState(
     emit('message-sent', { ...created!, at: new Date(created!.at) })
     form.githubName = form.messageContent = ''
     githubUser.value = null
+
+    alert('Message sent successfully!\n\nNote: This message board has no reply function.\nIf you want to contact me, please click the email icon in the top right corner 📧')
   },
   null,
   { immediate: false },
