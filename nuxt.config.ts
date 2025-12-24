@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
+import { hash as fnvHash } from 'fnv-plus'
 
 export default defineNuxtConfig({
   modules: [
@@ -44,6 +45,15 @@ export default defineNuxtConfig({
       transformers: [
         './transformers/title-hash.ts',
       ],
+      markdown: {
+        remarkPlugins: {
+          'remark-wiki-link': {
+            options: {
+              hrefTemplate: (permalink: string) => `/p/${fnvHash(permalink, 32).hex()}`,
+            },
+          },
+        },
+      },
     },
   },
   compatibilityDate: '2024-04-03',

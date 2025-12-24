@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const route = useRoute()
-const { data } = await useAsyncData(async () => {
+const { data } = await useAsyncData(route.fullPath, async () => {
   const post = await queryCollection('posts').where('hash', '=', route.params.id).first()
   const jot = await queryCollection('jots').where('hash', '=', route.params.id).first()
   return jot ?? post
@@ -21,7 +21,10 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="w-full md:max-w-2xl lg:max-w-3xl mx-auto flex flex-col gap-6">
+  <div
+    :key="route.fullPath"
+    class="w-full md:max-w-2xl lg:max-w-3xl mx-auto flex flex-col gap-6"
+  >
     <div>
       <h1 class="text-2xl font-bold mb-1 mt-8 brightness-110">
         {{ data?.title }}
