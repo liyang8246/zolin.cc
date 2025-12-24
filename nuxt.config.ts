@@ -19,6 +19,7 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'zh-CN' },
       meta: [
         { name: 'google-site-verification', content: '61T3US7e-yG_iGTm42exVmDdkkA-T7N563HeeJpl1MA' },
+        { name: 'msvalidate.01', content: '1D1A36778D7D4E95162D6A542A9D17F7' },
       ],
     },
     pageTransition: {
