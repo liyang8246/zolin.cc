@@ -79,6 +79,7 @@ const canSendMessage = computed(() => githubUser.value?.link && form.messageCont
       >
         <NuxtImg
           :src="githubUser.avatar"
+          :alt="`Avatar of ${githubUser.name}`"
           class="size-5 rounded"
         />
         <span

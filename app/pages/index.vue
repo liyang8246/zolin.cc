@@ -22,6 +22,7 @@ useSeoMeta({
         <div class="flex gap-4">
           <NuxtImg
             src="/profile.jpg"
+            alt="Avatar of Zolin Lee"
             class="size-32 rounded-xl"
           />
           <div class="flex flex-col justify-center gap-1.5">

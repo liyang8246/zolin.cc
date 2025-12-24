@@ -27,6 +27,7 @@ useSeoMeta({
       >
         <NuxtImg
           :src="f.favicon"
+          :alt="`Favicon of ${f.name}`"
           class="size-8 rounded opacity-75"
         />
         <div class="text-xl">{{ f.name }}</div>

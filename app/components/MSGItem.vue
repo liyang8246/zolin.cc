@@ -16,6 +16,7 @@ const { avatar, name, content } = defineProps<{
     >
       <NuxtImg
         :src="avatar"
+        :alt="`Avatar of ${name}`"
         class="size-4 rounded"
       />
       <div>
