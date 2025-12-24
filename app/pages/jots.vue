@@ -24,9 +24,9 @@ useHead({
         :to="`/p/${j.hash}`"
         class="flex justify-between w-full hover:brightness-130 cursor-pointer"
       >
-        <h1 class="text-sm md:text-xl">
+        <span class="text-sm md:text-xl">
           {{ j.title }}
-        </h1>
+        </span>
         <div class="hidden lg:flex items-center gap-2 text-sm text-secondary-content">
           <span v-if="j.tags?.length"> # </span>
           <span

@@ -121,9 +121,9 @@ const { data: recentPosts } = await useAsyncData('recent-posts', () =>
           :to="`/p/${post.hash}`"
           class="flex flex-col gap-2 w-full h-40 max-w-md lg:w-xs bg-zinc-950 transition-all p-4 rounded-xl cursor-pointer hover:brightness-130 hover:scale-105"
         >
-          <h1 class="text-lg mb-auto">
+          <span class="text-lg mb-auto">
             {{ post.title }}
-          </h1>
+          </span>
           <div class="flex items-center gap-1">
             <Icon name="tabler:calendar-week" />
             <span class="text-sm">

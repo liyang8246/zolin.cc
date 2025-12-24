@@ -3,12 +3,12 @@ const { id } = defineProps<{ id?: string }>()
 </script>
 
 <template>
-  <h1
+  <h2
     :id="id"
     class="text-2xl font-bold relative"
   >
     <a :href="`#${id}`"><slot /></a>
-  </h1>
+  </h2>
 </template>
 
 <style scoped>
