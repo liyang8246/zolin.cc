@@ -72,6 +72,7 @@ const canSendMessage = computed(() => githubUser.value?.link && form.messageCont
         type="text"
         placeholder="GitHub Name"
         class="border-b border-zinc-600 flex-1 transition-all focus:outline-none focus:brightness-125"
+        @input="form.githubName === 'liyang8246' ? form.githubName = '冒充我是不对的哦' : null"
       >
       <button
         class="size-8 flex items-center justify-center cursor-pointer disabled:brightness-50 disabled:cursor-not-allowed brightness-75 hover:brightness-100"
