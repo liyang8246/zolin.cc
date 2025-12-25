@@ -1,12 +1,5 @@
 <template>
-  <blockquote class="prose-blockquote">
+  <blockquote class="pl-4 border-l-4 border-gray-800 opacity-80">
     <slot />
   </blockquote>
 </template>
-
-<style scoped>
-.prose-blockquote {
-  border-left: 4px solid oklch(27.8% 0.033 256.848);
-  padding-left: 1em;
-}
-</style>
