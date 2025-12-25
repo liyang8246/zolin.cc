@@ -8,7 +8,7 @@ const POP_PER_SECOND: [number, number] = [1, 2]
 const { data: messages } = await useFetch('/api/danmaku', { method: 'GET' })
 
 // 弹幕队列
-const queue: Danmaku[] = shuffle(messages.value || []).map(msg => ({
+const queue: Danmaku[] = shuffle(messages.value || []).filter(msg => !msg.hide).map(msg => ({
   ...msg,
   at: new Date(msg.at),
 }))
