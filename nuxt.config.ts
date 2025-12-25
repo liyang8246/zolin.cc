@@ -18,6 +18,9 @@ export default defineNuxtConfig({
     head: {
       title: 'Zolin\'s blog',
       htmlAttrs: { lang: 'zh-CN' },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
       meta: [
         { name: 'google-site-verification', content: '61T3US7e-yG_iGTm42exVmDdkkA-T7N563HeeJpl1MA' },
         { name: 'msvalidate.01', content: '1D1A36778D7D4E95162D6A542A9D17F7' },
