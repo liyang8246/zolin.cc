@@ -32,9 +32,8 @@
       </NuxtLink>
       <NuxtLink
         to="mailto:liyang8246@outlook.com?subject=Hey%20there!%20Let's%20chat!"
-        class="flex gap-4 hover:text-white"
+        class="flex hover:text-white"
       >
-        <span>Contact me</span>
         <Icon
           name="tabler:mail"
           class="text-xl mb-1"
