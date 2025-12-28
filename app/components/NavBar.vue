@@ -36,7 +36,7 @@
       >
         <Icon
           name="tabler:mail"
-          class="text-lg sm:text-xl mb-1"
+          class="text-lg sm:text-xl"
         /></NuxtLink>
       <NuxtLink
         to="https://github.com/liyang8246"
@@ -44,7 +44,7 @@
         class="flex"
       ><Icon
         name="tabler:brand-github"
-        class="text-lg sm:text-xl hover:text-white mb-1"
+        class="text-lg sm:text-xl hover:text-white"
       /></NuxtLink>
       <NuxtLink
         to="https://space.bilibili.com/25629234"
@@ -52,7 +52,7 @@
         class="flex"
       ><Icon
         name="tabler:brand-bilibili"
-        class="text-lg sm:text-xl hover:text-white mb-1"
+        class="text-lg sm:text-xl hover:text-white"
       /></NuxtLink>
     </div>
   </div>
