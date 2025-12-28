@@ -3,30 +3,30 @@
 </script>
 
 <template>
-  <div class="flex items-end">
+  <div class="flex items-end gap-2 sm:gap-4">
     <NuxtLink
       to="/"
-      class="text-xl font-bold"
+      class="text-lg sm:text-xl font-bold shrink-0"
     >
       ZolinLee
     </NuxtLink>
     <div class="mx-auto" />
-    <div class="flex gap-4 h-full items-end">
+    <div class="flex gap-2 sm:gap-4 h-full items-end">
       <NuxtLink
         to="/posts"
-        class="hover:text-white hover:cursor-pointer"
+        class="hover:text-white hover:cursor-pointer text-sm sm:text-base"
       >
         Posts
       </NuxtLink>
       <NuxtLink
         to="/jots"
-        class="hover:text-white hover:cursor-pointer"
+        class="hover:text-white hover:cursor-pointer text-sm sm:text-base"
       >
         Jots
       </NuxtLink>
       <NuxtLink
         to="/friends"
-        class="hover:text-white hover:cursor-pointer"
+        class="hover:text-white hover:cursor-pointer text-sm sm:text-base"
       >
         Friends
       </NuxtLink>
@@ -36,7 +36,7 @@
       >
         <Icon
           name="tabler:mail"
-          class="text-xl mb-1"
+          class="text-lg sm:text-xl mb-1"
         /></NuxtLink>
       <NuxtLink
         to="https://github.com/liyang8246"
@@ -44,7 +44,7 @@
         class="flex"
       ><Icon
         name="tabler:brand-github"
-        class="text-xl hover:text-white mb-1"
+        class="text-lg sm:text-xl hover:text-white mb-1"
       /></NuxtLink>
       <NuxtLink
         to="https://space.bilibili.com/25629234"
@@ -52,7 +52,7 @@
         class="flex"
       ><Icon
         name="tabler:brand-bilibili"
-        class="text-xl hover:text-white mb-1"
+        class="text-lg sm:text-xl hover:text-white mb-1"
       /></NuxtLink>
     </div>
   </div>
