@@ -56,7 +56,7 @@ useSeoMeta({
             :key="tag"
           > {{ tag }} </span>
           <span> | </span>
-          <span class="font-mono">{{ p.date.slice(0, 10) }}</span>
+          <span class="font-mono whitespace-nowrap">{{ p.date.slice(0, 10) }}</span>
         </div>
       </NuxtLink>
     </div>
