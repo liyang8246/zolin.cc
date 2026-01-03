@@ -4,6 +4,7 @@ const friends = [
   { favicon: 'https://jelasin.github.io/images/touxiang.jpg', name: 'Jelasin\'s Blog', url: 'https://jelasin.github.io', on: '2025-12-22' },
   { favicon: 'https://kevinguo.ink/favicon/favicon-32x32.png', name: 'KevinGuo ink', url: 'https://kevinguo.ink', on: '2025-12-23' },
   { favicon: 'https://book.paperee.guru/ebcat.jpg', name: '纸片君ee的博客', url: 'https://paperee.guru', on: '2025-12-23' },
+  { favicon: 'https://juan131ng.zeroarea.top/favicon.ico', name: 'juan131ng\'s Blog', url: 'https://juan131ng.zeroarea.top', on: '2026-01-03' },
 ]
 
 useSeoMeta({
