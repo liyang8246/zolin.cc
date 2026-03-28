@@ -1,10 +1,3 @@
-<script setup lang="ts">
-import { Analytics } from '@vercel/analytics/nuxt'
-import { SpeedInsights } from '@vercel/speed-insights/nuxt'
-
-const isDev = import.meta.dev
-</script>
-
 <template>
   <div class="bg-primary">
     <div class="flex flex-col bg-linear-to-b from-slate-900 from-[128px] to-transparent to-[768px] min-h-screen text-primary-content p-4 md:p-8 font-default">
@@ -16,10 +9,6 @@ const isDev = import.meta.dev
         CC BY-NC-SA 4.0
       </div>
     </div>
-  </div>
-  <div v-if="!isDev">
-    <Analytics />
-    <SpeedInsights />
   </div>
 </template>
 

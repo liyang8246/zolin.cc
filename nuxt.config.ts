@@ -3,15 +3,17 @@ import { hash as fnvHash } from 'fnv-plus'
 
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/sitemap',
     '@nuxt/content',
-    '@nuxtjs/color-mode',
     '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxt/icon',
     '@nuxt/fonts',
-    '@vueuse/nuxt',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/sitemap',
     '@nuxthub/core',
+    '@vercel/analytics',
+    '@vercel/speed-insights',
+    '@vueuse/nuxt',
   ],
   devtools: { enabled: true },
   app: {
