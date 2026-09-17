@@ -1,0 +1,8 @@
+allowBuilds:
+  '@nuxt/icon': true
+  '@parcel/watcher': true
+  better-sqlite3: true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+  vue-demi: true
