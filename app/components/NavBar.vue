@@ -32,6 +32,7 @@
       </NuxtLink>
       <NuxtLink
         to="mailto:liyang8246@outlook.com?subject=Hey%20there!%20Let's%20chat!"
+        aria-label="发送邮件"
         class="flex hover:text-white"
       >
         <Icon
@@ -41,6 +42,7 @@
       <NuxtLink
         to="https://github.com/liyang8246"
         target="_blank"
+        aria-label="GitHub"
         class="flex"
       ><Icon
         name="tabler:brand-github"
@@ -49,6 +51,7 @@
       <NuxtLink
         to="https://space.bilibili.com/25629234"
         target="_blank"
+        aria-label="哔哩哔哩"
         class="flex"
       ><Icon
         name="tabler:brand-bilibili"

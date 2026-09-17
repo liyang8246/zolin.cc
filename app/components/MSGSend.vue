@@ -77,6 +77,7 @@ const canSendMessage = computed(() => githubUser.value?.link && form.messageCont
         @input="form.githubName.toLowerCase() === 'liyang8246' ? form.githubName = '冒充我是不对的哦' : null"
       >
       <button
+        aria-label="获取 GitHub 用户信息"
         class="size-8 flex items-center justify-center cursor-pointer disabled:brightness-50 disabled:cursor-not-allowed brightness-75 hover:brightness-100"
         :disabled="!canFetchGithub || isFetchingUser"
         @click="fetchGithubUser()"
@@ -114,6 +115,7 @@ const canSendMessage = computed(() => githubUser.value?.link && form.messageCont
         class="flex items-center text-xs"
       >{{ `${getCharLength(form.messageContent)}/45` }}</span>
       <button
+        aria-label="发送留言"
         class="size-8 flex items-center justify-center cursor-pointer disabled:brightness-50 disabled:cursor-not-allowed brightness-75 hover:brightness-100"
         :disabled="!canSendMessage || isSendingMessage"
         @click="sendMessage()"
