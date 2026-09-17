@@ -1,3 +1,13 @@
+<script lang="ts" setup>
+// 预热客户端内容数据库
+onMounted(() => {
+  Promise.all([
+    queryCollection('posts').select('hash').all(),
+    queryCollection('jots').select('hash').all(),
+  ]).catch(() => {})
+})
+</script>
+
 <template>
   <div class="bg-primary">
     <div class="flex flex-col bg-linear-to-b from-slate-900 from-[128px] to-transparent to-[768px] min-h-screen text-primary-content p-4 md:p-8 font-default">
