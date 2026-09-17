@@ -5,8 +5,8 @@ const friends = [
   { favicon: 'https://kevinguo.ink/favicon/favicon-32x32.png', name: 'KevinGuo ink', url: 'https://kevinguo.ink', on: '2025-12-23' },
   { favicon: 'https://book.paperee.guru/ebcat.jpg', name: '纸片君ee的博客', url: 'https://paperee.guru', on: '2025-12-23' },
   { favicon: 'https://juan131ng.zeroarea.top/img/favicon.jpg', name: 'Juan131ng', url: 'https://juan131ng.zeroarea.top', on: '2026-01-03' },
+  { favicon: 'https://haoyn231.github.io/_astro/avatar.Cwy3G8b4_Z1zsG0X.webp', name: '好暖好温暖的博客', url: 'https://haoyn231.github.io', on: '2026-07-17' },
   { favicon: 'https://www.mywuqu.me/icon-32.png', name: '无趣', url: 'https://www.mywuqu.me', on: '2026-09-16' },
-  { favicon: 'https://haoyn231.github.io/_astro/avatar.Cwy3G8b4_Z1zsG0X.webp', name: '好暖好温暖的博客', url: 'https://haoyn231.github.io', on: '2026-09-17' },
 ]
 
 useSeoMeta({
