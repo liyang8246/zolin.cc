@@ -49,14 +49,17 @@ useSeoMeta({
           <Badge
             icon="material-icon-theme:rust"
             label="Rust"
+            to="https://www.rust-lang.org/"
           />
           <Badge
             icon="material-icon-theme:python"
             label="Python"
+            to="https://www.python.org/"
           />
           <Badge
             icon="material-icon-theme:typescript"
             label="TypeScript"
+            to="https://www.typescriptlang.org/"
           />
         </div>
         <div class="flex items-center gap-2">
@@ -66,18 +69,22 @@ useSeoMeta({
           <Badge
             icon="material-icon-theme:tauri"
             label="Tauri"
+            to="https://tauri.app/"
           />
           <Badge
             icon="material-icon-theme:vue"
             label="Vue"
+            to="https://vuejs.org/"
           />
           <Badge
             icon="material-icon-theme:nuxt"
             label="Nuxt"
+            to="https://nuxt.com/"
           />
           <Badge
             icon="material-icon-theme:svelte"
             label="Svelte"
+            to="https://svelte.dev/"
           />
         </div>
         <div class="flex items-center gap-2">
@@ -87,18 +94,22 @@ useSeoMeta({
           <Badge
             icon="material-icon-theme:vscode"
             label="VSCode"
+            to="https://code.visualstudio.com/"
           />
           <Badge
             icon="logos:obsidian-icon"
             label="Obsidian"
+            to="https://obsidian.md/"
           />
           <Badge
             icon="material-icon-theme:docker"
             label="Docker"
+            to="https://www.docker.com/"
           />
           <Badge
             icon="material-icon-theme:git"
             label="Git"
+            to="https://git-scm.com/"
           />
         </div>
       </div>
