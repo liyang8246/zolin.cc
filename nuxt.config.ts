@@ -1,3 +1,4 @@
+import process from 'node:process'
 import tailwindcss from '@tailwindcss/vite'
 import { hash as fnvHash } from 'fnv-plus'
 
@@ -62,7 +63,16 @@ export default defineNuxtConfig({
       },
     },
   },
-  compatibilityDate: '2024-04-03',
+  future: {
+    compatibilityVersion: 5,
+  },
+  fonts: {
+    providers: {
+      google: false,
+      googleicons: false,
+    },
+  },
+  compatibilityDate: '2026-10-16',
   hub: {
     db: {
       dialect: 'postgresql',
@@ -78,7 +88,7 @@ export default defineNuxtConfig({
   },
   eslint: {
     config: {
-      stylistic: true,
+      standalone: false,
     },
   },
   icon: {

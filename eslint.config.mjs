@@ -1,11 +1,5 @@
 // @ts-check
+import antfu from '@antfu/eslint-config'
 import withNuxt from './.nuxt/eslint.config.mjs'
 
-export default withNuxt(
-  {
-    rules: {
-      'vue/multi-word-component-names': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-    },
-  },
-)
+export default withNuxt(antfu())

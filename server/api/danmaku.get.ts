@@ -1,3 +1,4 @@
+import type { Danmaku } from '#shared/types/schema'
 import { db, schema } from 'hub:db'
 
 export default defineEventHandler(async (_event) => {

@@ -32,7 +32,7 @@ const containerHeight = computed(() => Math.max(cmHeight.value, 24))
       <span> {{ filename ?? language ?? 'plaintext' }} </span>
     </div>
     <div
-      :style="{ height: containerHeight + 'px' }"
+      :style="{ height: `${containerHeight}px` }"
       class="overflow-hidden transition-[height] duration-400 ease-in-out"
     >
       <p

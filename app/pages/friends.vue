@@ -33,7 +33,9 @@ useSeoMeta({
           :alt="`Favicon of ${f.name}`"
           class="size-8 rounded opacity-75"
         />
-        <div class="text-xl">{{ f.name }}</div>
+        <div class="text-xl">
+          {{ f.name }}
+        </div>
         <div class="mx-auto" />
         <div class="flex gap-2 text-sm text-secondary-content">
           <span>Joined on</span>
