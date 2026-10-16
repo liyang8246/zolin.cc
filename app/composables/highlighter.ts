@@ -3,7 +3,7 @@ import { createHighlighter } from 'shiki'
 
 let highlighterPromise: Promise<HighlighterGeneric<BundledLanguage, BundledTheme>> | null = null
 
-export const useHighlighter = async (lang: string) => {
+export async function useHighlighter(lang: string) {
   if (!highlighterPromise) {
     highlighterPromise = createHighlighter({
       langs: [lang],

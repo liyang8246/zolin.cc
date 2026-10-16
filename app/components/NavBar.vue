@@ -38,25 +38,30 @@
         <Icon
           name="tabler:mail"
           class="text-xl mb-1"
-        /></NuxtLink>
+        />
+      </NuxtLink>
       <NuxtLink
         to="https://github.com/liyang8246"
         target="_blank"
         aria-label="GitHub"
         class="flex"
-      ><Icon
-        name="tabler:brand-github"
-        class="text-xl hover:text-white mb-1"
-      /></NuxtLink>
+      >
+        <Icon
+          name="tabler:brand-github"
+          class="text-xl hover:text-white mb-1"
+        />
+      </NuxtLink>
       <NuxtLink
         to="https://space.bilibili.com/25629234"
         target="_blank"
         aria-label="哔哩哔哩"
         class="flex"
-      ><Icon
-        name="tabler:brand-bilibili"
-        class="text-xl hover:text-white mb-1"
-      /></NuxtLink>
+      >
+        <Icon
+          name="tabler:brand-bilibili"
+          class="text-xl hover:text-white mb-1"
+        />
+      </NuxtLink>
     </div>
   </div>
 </template>

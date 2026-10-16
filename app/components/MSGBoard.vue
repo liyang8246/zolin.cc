@@ -23,7 +23,7 @@ const trackSpeeds = Array.from({ length: TRACKS_NUM }, (_, i) => {
 })
 
 // 弹幕滚动完成，回到队尾
-const onAnimationEnd = (track: number, danmaku: Danmaku) => {
+function onAnimationEnd(track: number, danmaku: Danmaku) {
   trackItems.value.get(track)!.splice(
     trackItems.value.get(track)!.findIndex(d => d.id === danmaku.id),
     1,
@@ -32,9 +32,10 @@ const onAnimationEnd = (track: number, danmaku: Danmaku) => {
 }
 
 // 发射弹幕
-const emitNewDanmaku = () => {
+function emitNewDanmaku() {
   const count = Math.floor(Math.random() * (POP_PER_SECOND[1] - POP_PER_SECOND[0])) + POP_PER_SECOND[0]
-  if (queue.length === 0) return
+  if (queue.length === 0)
+    return
 
   const now = Date.now()
   const sortedTracks = Array.from({ length: TRACKS_NUM }, (_, i) => ({

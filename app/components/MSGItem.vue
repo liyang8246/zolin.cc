@@ -20,7 +20,7 @@ const { avatar, name, content } = defineProps<{
         class="size-4 rounded"
       />
       <div>
-        {{ name + ':' }}
+        {{ `${name}:` }}
       </div>
     </NuxtLink>
     <p> {{ content }} </p>

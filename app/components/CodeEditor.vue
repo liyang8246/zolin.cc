@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { EditorState } from '@codemirror/state'
-import { lineNumbers, EditorView } from '@codemirror/view'
+import { EditorView, lineNumbers } from '@codemirror/view'
 import shiki from 'codemirror-shiki'
-
-const model = defineModel<string>({ default: '' })
 
 const {
   language = 'text',
@@ -15,11 +13,14 @@ const {
   theme?: string
 }>()
 
+const model = defineModel<string>({ default: '' })
+
 const container = ref<HTMLElement>()
 let editorView: EditorView | null = null
 
 onMounted(async () => {
-  if (!container.value) return
+  if (!container.value)
+    return
 
   const highlighter = await useHighlighter(language)
   const transTheme = EditorView.theme({

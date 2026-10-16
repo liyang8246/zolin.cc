@@ -6,8 +6,7 @@ const { data: recentPosts } = await useAsyncData('recent-posts', () =>
     .select('title', 'date', 'tags', 'hash')
     .order('date', 'DESC')
     .limit(2)
-    .all(),
-)
+    .all())
 
 useSeoMeta({
   description: '欢迎来到 Zolin Lee 的个人博客. 全栈开发者和电子爱好者, 分享关于 Rust、Python、TypeScript 和技术的思考.',
