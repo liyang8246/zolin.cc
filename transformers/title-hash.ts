@@ -5,7 +5,7 @@ function id2Title(id: string): string {
   const fileName = id.split('/').pop()
   if (!fileName)
     throw new Error('Invalid file id', { cause: id })
-  const title = fileName.split('.').shift()
+  const title = fileName.replace(/\.md$/, '')
   if (!title)
     throw new Error('Invalid file name', { cause: fileName })
   return title
