@@ -50,8 +50,5 @@ useSeoMeta({
       class="flex flex-col gap-4"
       :value="data"
     />
-    <p class="mb-4">
-      --- 评论区施工中🚧 ---
-    </p>
   </div>
 </template>

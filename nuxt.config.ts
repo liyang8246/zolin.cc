@@ -66,12 +66,6 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 5,
   },
-  fonts: {
-    providers: {
-      google: false,
-      googleicons: false,
-    },
-  },
   compatibilityDate: '2026-10-16',
   hub: {
     db: {
